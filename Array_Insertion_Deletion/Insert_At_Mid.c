@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <conio.h>
+
+void insertAtLast(int arr[], int *n, int target, int pos)
+{
+    (*n)++;
+    for(int i=*n-1;i>=pos;i--){
+        arr[i]=arr[i-1];  
+    }
+    arr[pos-1]=target;
+}
+
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 1000;
+    int pos = 4;
+
+    insertAtLast(arr, &size, target,pos);
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ",arr[i]);
+    }
+
+    return 0;
+}
