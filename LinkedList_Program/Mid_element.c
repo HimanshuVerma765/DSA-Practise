@@ -49,7 +49,7 @@ int main()
         temp = temp->next;
     }
 
-    int mid = count / 2;
+    int mid = (count / 2) + 1;
 
 temp=a;
 
